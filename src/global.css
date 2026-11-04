@@ -1,64 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
 }
 
 header {
-    padding: 10px 30px;
+    width: 100%;
+    max-width: 1232px;
+    margin: 0 auto;
+    padding: 20px 16px;
 }
 
 header h1 {
+    margin: 0;
     font-size: 40px;
     font-weight: 800;
 }
 
-footer {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1232px;
+    margin: 0 auto;
+    padding: 0 16px;
 }
 
-footer .copyright {
-    font-size: 14px;
-    color: #333;
-    text-align: center;
-}
-
-footer .copyright a {
-    color: #444;
-}
-
-footer .copyright a:hover {
-    color: #555;
-}
-
-footer .copyright:before {
-    content: '©';
-}
-
-@media (max-width: 639px) {
-    header {
-        padding: 10px 16px;
-    }
-
-    header h1 {
-        font-size: 30px;
-    }
-
-    main {
-        width: calc(100% - 24px);
-    }
-
-    .footer {
-        justify-content: center;
-        padding: 24px 16px;
-        text-align: center;
-    }
-}
 
 .sources-panel {
+    width: 100%;
     margin: 24px 0 32px;
     padding: 20px;
     background: #1f2128;
@@ -74,15 +53,14 @@ footer .copyright:before {
     color: #fff;
 }
 
+
 .news-section {
+    width: 100%;
     margin-bottom: 40px;
 }
 
-/* Footer */
-
 .footer {
     width: 100%;
-    height: auto;
     margin-top: auto;
     background: #1f2128;
     border-top: 1px solid #353840;
@@ -93,7 +71,8 @@ footer .copyright:before {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 20px;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1232px;
     margin: 0 auto;
     padding: 24px 16px;
 }
@@ -135,10 +114,34 @@ footer .copyright:before {
     text-decoration: underline;
 }
 
-@media (max-width: 640px) {
+
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 34px;
+    }
+
     .sources-panel {
-        padding: 14px;
+        padding: 16px;
+    }
+}
+
+
+@media (max-width: 640px) {
+    header {
+        padding: 16px 12px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    .sources-panel {
         margin: 16px 0 24px;
+        padding: 14px;
     }
 
     .sources-panel__title,
