@@ -49,5 +49,3 @@ export interface RequestConfig {
 }
 
 export type ApiCallback<T> = (data: T) => void;
-
-export type ReadonlyArticle = Readonly<NewsArticle>;
